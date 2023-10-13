@@ -1,0 +1,9 @@
+<div>
+    <h1>Sitios de Interes en CABA</h1>
+    <ul>
+      <li *ngFor="let instancia of instanciasData">
+        <button [routerLink]="['/direccion']" (click)="onSitioClick(instancia.id)">{{ instancia.nombre }}</button>
+      </li>
+    </ul>
+    
+  </div>

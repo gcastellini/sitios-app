@@ -1,0 +1,7 @@
+  <div id="map-info">
+    <p>{{direccion}}</p>
+  </div>
+  <br>
+  <div  *ngIf="!error" id="leafletMap" style="width: 100%; height: 400px;"></div>
+  <div id="error-message" *ngIf="error">Map Not Available</div>
+  
