@@ -10,7 +10,7 @@ import * as L from 'leaflet';
 export class DireccionComponent {
 
   direccionData: any[] = []; 
-  direccion:string | null | undefined;
+  sitio:string | null | undefined;
   centroide: string[] = [];
   altura!:string;
   lat!:number;
@@ -44,7 +44,9 @@ export class DireccionComponent {
   }
 
   formatAltura(altura:string){
-    const formattedPuerta=altura.split(' ').join('+');
+    const formattedPuerta=altura.split(', ')
+    .map((part)=> part.replaceAll(/ /g,'+').replace(/PRES\.|TTE\.|ALTE\.|F\.|GRAL\./g,''))
+    .join('+');
 
 
     return formattedPuerta;
@@ -60,13 +62,16 @@ export class DireccionComponent {
       .then(data=>{
         this.direccionData=data;
         console.log(this.direccionData);
-        this.direccion=data.direccionNormalizada;
+        this.sitio=data.contenido[0].valor;
         this.extractAndStoreNumbers(data.ubicacion.centroide);        
         this.dataService.getAltura(this.centroide[0],this.centroide[1]).
         then(data=>{
+          if (JSON.parse(data.slice(1,-1)).puerta){
           this.altura=JSON.parse(data.slice(1,-1)).puerta;
-          console.log(this.formatAltura(this.altura));
-          this.dataService.getLatLong(this.altura).then
+          } else{
+            this.altura=JSON.parse(data.slice(1,-1)).altura_par;
+          }
+          this.dataService.getLatLong(this.formatAltura(this.altura)).then
           (data=>{
             console.log(data);
             this.lat=data[0].lat;
