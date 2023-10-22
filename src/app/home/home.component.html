@@ -1,5 +1,9 @@
 <div>
+  <div class="header">
+    <img src="../assets/icons/icon-192x192.png" alt="Logo">
     <h1>Sitios de Interés en CABA</h1>
+  </div>
+  <br>
     <ul>
       <li *ngFor="let instancia of instanciasData">
         <button [routerLink]="['/direccion']" (click)="onSitioClick(instancia.id)">{{ instancia.nombre }}</button>
@@ -7,3 +11,6 @@
     </ul>
     
   </div>
+  <footer>
+    <p>&copy; 2023 Sitios App | <a href="https://www.flaticon.es/iconos-gratis/argentina" title="Argentina iconos">Argentina iconos creados por Freepik - Flaticon</a></p>
+</footer>

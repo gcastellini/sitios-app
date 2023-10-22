@@ -1,0 +1,8 @@
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the content */
+  }
+  
+  h1 {
+    margin-right: 20px; /* Add some spacing between the text and the image */
+  }
