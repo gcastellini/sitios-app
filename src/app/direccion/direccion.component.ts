@@ -27,7 +27,6 @@ export class DireccionComponent {
     }).addTo(this.map);
 
     L.marker([this.lat, this.long]).addTo(this.map);
-
   }
 
 
