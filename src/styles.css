@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the content */
+    flex-direction: column; /* Display the list vertically */
+    justify-content: center;
+  }
+  
+  h1 {
+    margin-right: 20px; 
+    color: #111; 
+    font-family: 'Mooli';
+    font-size: 40px; 
+    font-weight: 700; 
+    line-height: 64px;  
+    padding: 20px 30px; 
+    text-align: center; 
+  
+  }
+
+
+  @media (display-mode: standalone) {
+    #instalacion {
+        display: none;
+    }
+    body {
+        overscroll-behavior-y: contain;
+      }    
+}
+

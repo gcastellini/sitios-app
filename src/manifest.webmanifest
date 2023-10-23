@@ -8,6 +8,14 @@
   "scope": "./",
   "id": "/",
   "start_url":"/",
+  "screenshots":[
+    { 
+      "src":"assets/images/screenshot.png",
+      "type": "image/png",
+      "sizes":"495x939"
+  }
+
+  ],
   "icons": [
     {
       "src": "assets/icons/icon-192x192.png",
