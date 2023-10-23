@@ -29,11 +29,6 @@ export class DireccionComponent {
     L.marker([this.lat, this.long]).addTo(this.map)
   }
 
-  onMapReady(map: L.Map) {
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 0);
-}
 
   extractAndStoreNumbers(responseString: string) {
     const numberPattern = '[-]{0,1}[\\d]*[\\.]{0,1}[\\d]+';
