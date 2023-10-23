@@ -26,7 +26,8 @@ export class DireccionComponent {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    L.marker([this.lat, this.long]).addTo(this.map)
+    L.marker([this.lat, this.long]).addTo(this.map);
+
   }
 
 
