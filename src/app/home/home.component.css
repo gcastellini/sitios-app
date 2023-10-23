@@ -36,11 +36,6 @@
     left: 0px;
   }
   
-  @media {
-    button {
-      padding: 13px 50px 13px;
-    }
-  }
 
   footer{
     display: flex; /* Use flexbox for layout */
