@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", event => {
             <meta name="google" content="notranslate">
         `;
     }
+    else{
 
     const installButton = document.querySelector("#instalacion button");
     if (installButton) {
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", event => {
             }
         });
     }
+  }
 });
 
 
