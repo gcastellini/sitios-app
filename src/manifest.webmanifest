@@ -13,6 +13,11 @@
       "src":"assets/images/screenshot.png",
       "type": "image/png",
       "sizes":"495x939"
+  },
+  {
+    "src":"assets/images/screenshot2.png",
+    "type": "image/png",
+    "sizes":"621x986"
   }
 
   ],

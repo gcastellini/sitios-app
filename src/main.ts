@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", event => {
                     console.log('User dismissed the install prompt');
                 }
             } else {
-                alert("Instalalo manualmente");
+                alert("App ya instalada!");
             }
         });
     }
