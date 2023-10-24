@@ -26,13 +26,14 @@ export class DireccionComponent {
  });
 
   initMap(): void {
-    this.map = L.map('leafletMap').setView([this.lat, this.long], 15);
+    this.map = L.map('leafletMap').setView([this.lat, this.long], 15).invalidateSize();
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
     L.marker([this.lat, this.long], {icon:this.myIcon}).addTo(this.map);
+
   }
 
 
